@@ -65,7 +65,7 @@ class player {
 	public void run() {
 		addPlayer();
 		while(compareWord(count-1)) {
-			System.out.println(playerWordList[count%playerNum][nameSection]+"님 단어를 입력하세요:");
+			System.out.println(playerWordList[count%playerNum][nameSection]+"님 단어를 입력해주세요:");
 			inputWord = scanner.next();
 			updatePlayerWord(count,inputWord);
 			++count;
