@@ -28,7 +28,7 @@ class player {
 	public boolean compareWord(int count) {
 		//비교 단어 설정 - 배열을 다쓰기엔 문장이 너무 길어짐
 		if(count<1) return true;
-		else if(playerWordList[count%playerNum][wordSection].length() == 1) {
+		if(playerWordList[count%playerNum][wordSection].length() == 1) {
 			System.out.println("한 글자 단어는 안됩니다.");
 			return false;
 		}
