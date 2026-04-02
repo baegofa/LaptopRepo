@@ -20,7 +20,6 @@ class player {
 			playerWordList[i][nameSection] = playerName;
 		}
 	}
-
 //단어를 입력받아 저장하는 메소드
 	public void updatePlayerWord(int count,String input) {
 		playerWordList[count%playerNum][1] = input;
@@ -29,10 +28,14 @@ class player {
 	public boolean compareWord(int count) {
 		//비교 단어 설정 - 배열을 다쓰기엔 문장이 너무 길어짐
 		if(count<1) return true;
+		else if(playerWordList[count%playerNum][wordSection].length() == 1) {
+			System.out.println("한 글자 단어는 안됩니다.");
+			return false;
+		}
 		
 		else {
 			if(count%playerNum == 0) {
-				lastWord = playerWordList[2][wordSection];
+				lastWord = playerWordList[playerNum-1][wordSection];
 				nowWord = playerWordList[0][wordSection];
 				wordIndex = lastWord.length();
 				lastchar = lastWord.charAt(wordIndex-1);
