@@ -29,16 +29,14 @@ public class Reservation {
 		int peerNum;
 		System.out.print("예약자 이름과 고객수를 입력하세요>>");
 		name = scanner.next();
-		peerNum = scanner.nextInt();
 		if (name.equals("매니저")) {
 			callManager();
 			return false;
 		}
-		else {
-			makeSeat(tableNum,name,peerNum);
-			++reservedNumber;
-			return true;
-		}
+		peerNum = scanner.nextInt();
+		makeSeat(tableNum,name,peerNum);
+		++reservedNumber;
+		return true;
 	}
 	
 	//예약자에 따라 seat 객체 초기화 & 생성
