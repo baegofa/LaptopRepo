@@ -13,16 +13,18 @@ public class Area {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String name=null, areaCode=null;
-		Area a = new Area(name,areaCode);
-		Area b = new Area(name,areaCode);
-		Area[] test = {a,b};
+		Area[] test = new Area[2];
 		for (int i =0;i<2;++i) {
 			System.out.print("지역 이름과 지역코드 입력>>");
 			name = scanner.next();
 			areaCode = scanner.next();
+			test[i] = new Area(name,areaCode);
 		}
-		System.out.println(a.name + "의 지역코드는 " + a.areaCode);
-		System.out.println(b.name + "의 지역코드는 " + b.areaCode);
+		for (int i =0;i<2;++i) {
+			System.out.println(test[i].name + "의 지역코드는 " + test[i].areaCode);
+		}
+		
+		
 		
 		scanner.close();
 	}
