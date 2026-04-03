@@ -1,7 +1,7 @@
 package chapter4Quiz;
 
 class Cube{
-	int width,length,height;
+	private int width,length,height;
 	Cube(int width,int length, int height){
 		this.width = width;
 		this.length = length;
@@ -10,7 +10,7 @@ class Cube{
 	
 	public void increase(int addwidth,int addlength, int addheight) {
 		width += addwidth;
-		length -= addlength;
+		length += addlength;
 		height += addheight;
 	}
 	
@@ -25,7 +25,7 @@ class Cube{
 }
 
 public class p183no4 {
-	public static void main() {
+	public static void main(String[] args) {
 		Cube cube = new Cube(1,2,3);
 		System.out.println("큐브의 부피는 " + cube.getVolume());
 		cube.increase(1,2,3);
