@@ -80,7 +80,7 @@ class librarySystem{
 		}
 	}
 	
-	//도서관 시스템 동작
+	//도서관 시스템 동작 
 	public void runSystem() {
 		String userOrder = "",title = "";
 		int bookNum;
