@@ -13,7 +13,7 @@ class player {
 		System.out.println("참가 인원을 입력하세요:");
 		playerNum = scanner.nextInt();
 		playerWordList = new String[playerNum][2];
-		
+
 		for (int i =0; i<playerNum; ++i) {
 			System.out.println("참가 선수의 이름을 입력하세요:");
 			playerName = scanner.next();
@@ -27,12 +27,14 @@ class player {
 //단어를 비교하는 메소드
 	public boolean compareWord(int count) {
 		//비교 단어 설정 - 배열을 다쓰기엔 문장이 너무 길어짐
-		if(count<1) return true;
+		if(count<1) {
+			return true;
+		}
 		if(playerWordList[count%playerNum][wordSection].length() == 1) {
 			System.out.println("한 글자 단어는 안됩니다.");
 			return false;
 		}
-		
+
 		else {
 			if(count%playerNum == 0) {
 				lastWord = playerWordList[playerNum-1][wordSection];
@@ -40,7 +42,7 @@ class player {
 				wordIndex = lastWord.length();
 				lastchar = lastWord.charAt(wordIndex-1);
 				nowchar = nowWord.charAt(0);
-				
+
 			}
 			else {
 				lastWord = playerWordList[count%playerNum-1][wordSection];
@@ -50,9 +52,10 @@ class player {
 				nowchar = nowWord.charAt(0);
 			}
 		}
-		
-		if(lastchar == nowchar) return true;
-		else {
+
+		if(lastchar == nowchar) {
+			return true;
+		} else {
 			return false;
 		}
 	}

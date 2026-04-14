@@ -4,22 +4,22 @@ import java.util.Scanner;
 class Grade {
 	String name;
 	int cpp,java,web;
-	
+
 	Grade(String name,int cpp,int java,int web){
 		this.name = name;
 		this.cpp = cpp;
 		this.java = java;
 		this.web = web;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
-	
+
 	public float getAverage() {
 		return (float)(cpp+java+web)/3;
 	}
-	
+
 }
 
 public class p182no3 {

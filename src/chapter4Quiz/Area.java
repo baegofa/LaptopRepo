@@ -9,7 +9,7 @@ public class Area {
 	}
 	public String getName() {return name;}
 	public String getAreaCode() {return areaCode;}
-	
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String name=null, areaCode=null;
@@ -23,9 +23,9 @@ public class Area {
 		for (int i =0;i<2;++i) {
 			System.out.println(test[i].name + "의 지역코드는 " + test[i].areaCode);
 		}
-		
-		
-		
+
+
+
 		scanner.close();
 	}
 

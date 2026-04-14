@@ -7,20 +7,23 @@ class Cube{
 		this.length = length;
 		this.height = height;
 	}
-	
+
 	public void increase(int addwidth,int addlength, int addheight) {
 		width += addwidth;
 		length += addlength;
 		height += addheight;
 	}
-	
+
 	public int getVolume() {
 		return width*length*height;
 	}
-	
+
 	public boolean isZero() {
-		if((width*length*height) == 0) return true;
-		else return false;
+		if((width*length*height) == 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }
 

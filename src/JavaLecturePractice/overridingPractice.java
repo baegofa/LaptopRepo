@@ -5,7 +5,7 @@ class SuperObject {
 	public void paint() {
 		draw();
 	}
-	
+
 	public void draw() {
 		System.out.println(name);
 	}
@@ -20,7 +20,7 @@ public class overridingPractice extends SuperObject{
 		super.draw();
 		System.out.println(name);
 	}
-	
+
 	public static void main(String[] args) {
 		SuperObject b = new overridingPractice();
 		b.paint();

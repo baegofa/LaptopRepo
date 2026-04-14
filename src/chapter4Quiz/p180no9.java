@@ -5,12 +5,12 @@ class Rectangle{
 	Rectangle (int w, int h){
 		this.w = 2; this.h = h;
 	}
-	
+
 	Rectangle(int w2){
 		w = w2;
 		h = 2;
 	}
-	
+
 	Rectangle() {
 		w = 1;
 	}

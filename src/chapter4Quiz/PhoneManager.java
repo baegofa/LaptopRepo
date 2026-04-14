@@ -5,7 +5,7 @@ import java.util.Scanner;
 class phone {
 	public static final boolean DEBUG = true;
 	String name,phoneNum;
-	
+
 	phone(String name, String phoneNum){
 		this.name = name;
 		this.phoneNum = phoneNum;
@@ -14,18 +14,18 @@ class phone {
 //phoneManager 클래스
 public class PhoneManager {
 	Scanner scanner = new Scanner(System.in);
-	
+
 	int peopleNum = 0;
 	String searchName = null;
 	phone[] recordBook;
-	
+
 	public void addPhone() {
 		//사람 수에 맞는 phone객체 생성
 		System.out.print("사람 수>>");
 		peopleNum = scanner.nextInt();
 		recordBook = new phone[peopleNum];
 	}
-	
+
 	//사람 이름 & 전화번호 저장 하는 메소드
 	public void addPhoneInfo() {
 		for (int i=0;i<peopleNum;++i) {
@@ -34,7 +34,7 @@ public class PhoneManager {
 		}
 		System.out.println("저장되었습니다.");
 	}
-	
+
 	//검색하는 메소드
 	public int searchPhoneInfo() {
 		System.out.print("검색할 이름>>");
@@ -49,7 +49,7 @@ public class PhoneManager {
 		}
 		return -1;
 	}
-	
+
 	//저장된 전화번호를 출력하는 메소드
 	public boolean showPhoneInfo(int searchedPhone) {
 		if(searchedPhone == -1) {
@@ -65,15 +65,17 @@ public class PhoneManager {
 			return true;
 		}
 	}
-	
+
 	//main 메소드
 	public static void main(String[] args) {
 		PhoneManager phoneManager = new PhoneManager();
-		
+
 		phoneManager.addPhone();
 		phoneManager.addPhoneInfo();
 		while(true) {
-			if(phoneManager.showPhoneInfo(phoneManager.searchPhoneInfo()) == false) break;
+			if(!phoneManager.showPhoneInfo(phoneManager.searchPhoneInfo())) {
+				break;
+			}
 			phoneManager.showPhoneInfo(phoneManager.searchPhoneInfo());
 		}
 	}
