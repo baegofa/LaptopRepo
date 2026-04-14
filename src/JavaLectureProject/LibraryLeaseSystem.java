@@ -49,7 +49,7 @@ class librarySystem{
 		}	
 	}
 	
-	//책 대여
+	//책 대여.
 	public void leaseBook(String title) {	
 		if(bookLib.get(searchBook(title)).bookNum==0) {
 			System.out.println("해당 책은 모두 대여되었습니다.");
