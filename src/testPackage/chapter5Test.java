@@ -17,6 +17,5 @@ public class chapter5Test {
 		Integer i = Integer.valueOf("10");
 		System.out.println(i.getClass().getName());
 		System.out.println(i.intValue()+1);
-		
 	}
 }
